@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainCollectionView: UICollectionView {
+class ListCollectionView: UICollectionView {
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: UICollectionViewLayout())
-        registerCell()
         configureLayout()
     }
     
@@ -18,13 +18,13 @@ class MainCollectionView: UICollectionView {
         return nil
     }
     
-    func registerCell() {
-        register(PersonCollectionViewCell.self,
-                 forCellWithReuseIdentifier: "MockCollectionViewCell")
-    }
+
     
     func configureLayout() {
         let configure = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         collectionViewLayout = UICollectionViewCompositionalLayout.list(using: configure)
     }
+    
+
+    
 }

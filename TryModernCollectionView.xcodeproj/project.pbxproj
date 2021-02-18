@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0808914125DD3936005AEBC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808914025DD3936005AEBC9 /* AppDelegate.swift */; };
 		0808914325DD3936005AEBC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808914225DD3936005AEBC9 /* SceneDelegate.swift */; };
-		0808914525DD3936005AEBC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808914425DD3936005AEBC9 /* ViewController.swift */; };
+		0808914525DD3936005AEBC9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808914425DD3936005AEBC9 /* ListViewController.swift */; };
 		0808914A25DD3939005AEBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0808914925DD3939005AEBC9 /* Assets.xcassets */; };
 		0808914D25DD3939005AEBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0808914B25DD3939005AEBC9 /* LaunchScreen.storyboard */; };
 		0808915825DD3939005AEBC9 /* TryModernCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808915725DD3939005AEBC9 /* TryModernCollectionViewTests.swift */; };
@@ -17,7 +17,11 @@
 		0808917C25DD3D23005AEBC9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808917B25DD3D23005AEBC9 /* Person.swift */; };
 		0808918125DD3D79005AEBC9 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808918025DD3D79005AEBC9 /* Section.swift */; };
 		0808918925DD3D93005AEBC9 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808918825DD3D93005AEBC9 /* PersonCollectionViewCell.swift */; };
-		0808918E25DD3DB2005AEBC9 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808918D25DD3DB2005AEBC9 /* MainCollectionView.swift */; };
+		0808918E25DD3DB2005AEBC9 /* ListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808918D25DD3DB2005AEBC9 /* ListCollectionView.swift */; };
+		0808919625DDDA97005AEBC9 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808919525DDDA97005AEBC9 /* PhotosViewController.swift */; };
+		080891A125DDDBDA005AEBC9 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080891A025DDDBDA005AEBC9 /* PhotoCollectionViewCell.swift */; };
+		080891A725DDDC0F005AEBC9 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080891A625DDDC0F005AEBC9 /* GalleryCollectionView.swift */; };
+		080891B025DDDD38005AEBC9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080891AF25DDDD38005AEBC9 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,7 @@
 		0808913D25DD3936005AEBC9 /* TryModernCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryModernCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0808914025DD3936005AEBC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0808914225DD3936005AEBC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0808914425DD3936005AEBC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0808914425DD3936005AEBC9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0808914925DD3939005AEBC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0808914C25DD3939005AEBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0808914E25DD3939005AEBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +58,11 @@
 		0808917B25DD3D23005AEBC9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		0808918025DD3D79005AEBC9 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0808918825DD3D93005AEBC9 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
-		0808918D25DD3DB2005AEBC9 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
+		0808918D25DD3DB2005AEBC9 /* ListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionView.swift; sourceTree = "<group>"; };
+		0808919525DDDA97005AEBC9 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		080891A025DDDBDA005AEBC9 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		080891A625DDDC0F005AEBC9 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		080891AF25DDDD38005AEBC9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +113,11 @@
 		0808913F25DD3936005AEBC9 /* TryModernCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				0808917A25DD3D0E005AEBC9 /* Views */,
 				0808917925DD3D07005AEBC9 /* Model */,
+				0808917A25DD3D0E005AEBC9 /* Views */,
+				080891AE25DDDCF8005AEBC9 /* ViewControllers */,
 				0808914025DD3936005AEBC9 /* AppDelegate.swift */,
 				0808914225DD3936005AEBC9 /* SceneDelegate.swift */,
-				0808914425DD3936005AEBC9 /* ViewController.swift */,
 				0808914925DD3939005AEBC9 /* Assets.xcassets */,
 				0808914B25DD3939005AEBC9 /* LaunchScreen.storyboard */,
 				0808914E25DD3939005AEBC9 /* Info.plist */,
@@ -147,10 +155,30 @@
 		0808917A25DD3D0E005AEBC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0808918825DD3D93005AEBC9 /* PersonCollectionViewCell.swift */,
-				0808918D25DD3DB2005AEBC9 /* MainCollectionView.swift */,
+				080891A525DDDBE9005AEBC9 /* Cell */,
+				0808918D25DD3DB2005AEBC9 /* ListCollectionView.swift */,
+				080891A625DDDC0F005AEBC9 /* GalleryCollectionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		080891A525DDDBE9005AEBC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				080891A025DDDBDA005AEBC9 /* PhotoCollectionViewCell.swift */,
+				0808918825DD3D93005AEBC9 /* PersonCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		080891AE25DDDCF8005AEBC9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0808914425DD3936005AEBC9 /* ListViewController.swift */,
+				0808919525DDDA97005AEBC9 /* PhotosViewController.swift */,
+				080891AF25DDDD38005AEBC9 /* MainTabBarController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0808918E25DD3DB2005AEBC9 /* MainCollectionView.swift in Sources */,
+				0808918E25DD3DB2005AEBC9 /* ListCollectionView.swift in Sources */,
+				0808919625DDDA97005AEBC9 /* PhotosViewController.swift in Sources */,
+				080891B025DDDD38005AEBC9 /* MainTabBarController.swift in Sources */,
 				0808918925DD3D93005AEBC9 /* PersonCollectionViewCell.swift in Sources */,
+				080891A725DDDC0F005AEBC9 /* GalleryCollectionView.swift in Sources */,
 				0808918125DD3D79005AEBC9 /* Section.swift in Sources */,
-				0808914525DD3936005AEBC9 /* ViewController.swift in Sources */,
+				0808914525DD3936005AEBC9 /* ListViewController.swift in Sources */,
+				080891A125DDDBDA005AEBC9 /* PhotoCollectionViewCell.swift in Sources */,
 				0808914125DD3936005AEBC9 /* AppDelegate.swift in Sources */,
 				0808917C25DD3D23005AEBC9 /* Person.swift in Sources */,
 				0808914325DD3936005AEBC9 /* SceneDelegate.swift in Sources */,
