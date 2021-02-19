@@ -24,7 +24,7 @@ class ListViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         view = collectionView
         collectionView.dataSource = dataSource
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemBackground
         applySnapshot()
         addNavigationBar()
     }

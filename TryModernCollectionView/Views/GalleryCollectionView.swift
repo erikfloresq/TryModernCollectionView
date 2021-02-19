@@ -12,6 +12,7 @@ class GalleryCollectionView: UICollectionView {
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         registerCell()
+        backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {

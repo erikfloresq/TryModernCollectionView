@@ -34,7 +34,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidAppear(animated)
         let list = UINavigationController(rootViewController: listVC)
         let photos = UINavigationController(rootViewController: photosVC)
-        viewControllers = [list, photos]
+        viewControllers = [photos, list]
     }
 
 }

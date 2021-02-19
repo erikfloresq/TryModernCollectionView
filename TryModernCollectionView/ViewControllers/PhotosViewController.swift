@@ -21,13 +21,7 @@ class PhotosViewController: UIViewController {
     typealias PhotoSnapshot = NSDiffableDataSourceSnapshot<PhotosSection, Photo>
     
     lazy var collectionView = GalleryCollectionView(frame: .zero, collectionViewLayout: generateLayout())
-    let photos = [Photo(image: UIImage(named: "wallpaper1")),
-                  Photo(image: UIImage(named: "wallpaper2")),
-                  Photo(image: UIImage(named: "wallpaper1")),
-                  Photo(image: UIImage(named: "wallpaper2")),
-                  Photo(image: UIImage(named: "wallpaper1")),
-                  Photo(image: UIImage(named: "wallpaper2")),
-                  Photo(image: UIImage(named: "wallpaper1")),
+    var photos = [Photo(image: UIImage(named: "wallpaper1")),
                   Photo(image: UIImage(named: "wallpaper2")),
                   Photo(image: UIImage(named: "wallpaper1")),
                   Photo(image: UIImage(named: "wallpaper2"))]
@@ -36,7 +30,7 @@ class PhotosViewController: UIViewController {
     override func loadView() {
         super.loadView()
         title = "Photos"
-        //navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
         view = collectionView
     }
@@ -46,6 +40,7 @@ class PhotosViewController: UIViewController {
         collectionView.dataSource = dataSource
         let snapshot = photosSnapshot()
         dataSource.apply(snapshot)
+        addNavigationBar()
     }
     
     func makeDataSource() -> PhotoDataSource {
@@ -95,6 +90,7 @@ class PhotosViewController: UIViewController {
                 widthDimension: .fractionalWidth(1.0),
                 heightDimension: .fractionalHeight(0.5)))
         pairItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+        
         let trailingGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1/3),
@@ -108,35 +104,28 @@ class PhotosViewController: UIViewController {
                 heightDimension: .fractionalWidth(4/9)),
             subitems: [mainItem, trailingGroup])
         
-        // Triplet
-        let tripletItem = NSCollectionLayoutItem(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1/3),
-                heightDimension: .fractionalHeight(1.0)))
-        tripletItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-        
-        let tripletGroup = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1.0),
-                heightDimension: .fractionalWidth(2/9)),
-            subitems: [tripletItem, tripletItem, tripletItem])
-        
-        // Reversed main with pair
-        let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1.0),
-                heightDimension: .fractionalWidth(4/9)),
-            subitems: [trailingGroup, mainItem])
-        
         let nestedGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1.0),
                 heightDimension: .fractionalWidth(16/9)),
-            subitems: [fullPhotoItem, mainWithPairGroup, tripletGroup, mainWithPairReversedGroup])
+            subitems: [fullPhotoItem, mainWithPairGroup, fullPhotoItem])
         
         let section = NSCollectionLayoutSection(group: nestedGroup)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+    
+    func addNavigationBar() {
+        let addIcon = UIImage(systemName: "plus")
+        let action = UIAction(title: "add", image: addIcon) { (action) in
+            self.photos.append(Photo(image: UIImage(named: "wallpaper1")))
+            let snapshot = self.photosSnapshot()
+            self.dataSource.apply(snapshot)
+        }
+        let menu = UIMenu(title: "Settings", image: nil, identifier: nil, options: .displayInline, children: [action])
+        let settingsIcon = UIImage(systemName: "gear")
+        let barButton = UIBarButtonItem(title: "", image: settingsIcon, primaryAction: nil, menu: menu)
+        navigationItem.rightBarButtonItem = barButton
     }
 
 }
